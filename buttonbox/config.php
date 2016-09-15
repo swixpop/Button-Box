@@ -3,7 +3,7 @@
 return array(
     'defaultColours' => array(
         array(
-          'label'     => 'a',
+          'label'     => '',
           'value'     => '',
           'cssColour' => ''
         )
