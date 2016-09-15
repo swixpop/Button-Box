@@ -60,18 +60,12 @@ class ButtonBox_ColoursFieldType extends BaseOptionsFieldType
 	 */
 	public function getSettingsHtml()
 	{
-		$options = craft()->config->get('defaultColours', 'buttonbox');
+    $options = $this->getOptions();
 
 		if (!$options)
 		{
 			// Give it a default row
-			$options = array(
-				array(
-					'label'     => '',
-					'value'     => '',
-					'cssColour' => ''
-				)
-			);
+			$options = craft()->config->get('defaultColours', 'buttonbox');
 		}
 
 		return craft()->templates->renderMacro('_includes/forms', 'editableTableField', array(
