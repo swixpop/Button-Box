@@ -60,7 +60,7 @@ class ButtonBox_ColoursFieldType extends BaseOptionsFieldType
 	 */
 	public function getSettingsHtml()
 	{
-		$options = $this->getOptions();
+		$options = craft()->config->get('defaultColours', 'buttonbox');
 
 		if (!$options)
 		{
